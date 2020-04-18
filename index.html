@@ -7,7 +7,6 @@
     <title>Word Guessing Game</title>
 
     <link rel="stylesheet" href="./assets/css/reset.css">
-    <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
@@ -20,16 +19,18 @@
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
         crossorigin="anonymous"></script>
 
+    <link rel="stylesheet" href="./assets/css/style.css">
+
 
 </head>
 
 <body>
 
     <div class="container">
-        <div class="row m-6">
+        <div class="row sm-12 m-8">
             <div class="col-lg">
                 <div class="card">
-                    <div class="card-body" id="head-card">
+                    <div class="card" id="title-card">
                         <h2>INTO THE SPIDER-VERSE</h2>
                     </div>
                 </div>
@@ -39,7 +40,7 @@
         <div class="row sm-12 m-8">
             <div class="col-lg">
                 <div class="card">
-                    <div class="card-body">
+                    <div class="card" id="guess-card">
                         <h4>The Word</h4>
                         <h3 id="currentword"></h3>
                     </div>
@@ -49,23 +50,28 @@
         <div class="row sm-12 m-8">
             <div class="col-lg">
                 <div class="card">
-                    <div class="card-body" id="word-card">
-                        <p>What spider-man is this?</p>
-                        <img id="image" src="">
+                    <div class="card" id="clue-card">
+                        <h4>What spider-man is this?</h4>
+
+                        <img class="center" id="image" src="">
+
                     </div>
                 </div>
-                <div class="col-lg">
-                    <div class="card-body">
 
-                        <h4>Wins:</h4>
-                        <h5 id="wins"></h5>
-                        <br>
-                        <h4>Guesses Remaining:</h4>
-                        <h6 id="guessesremaining"></h6>
-                        <br>
-                        <h4>Letters Guessed:</h4>
-                        <h3 id="guessedLetters"></h3>
-                    </div>
+            </div>
+        </div>
+        <div class="row sm-12 m-8">
+            <div class="col-lg">
+                <div class="card" id="scoreboard">
+
+                    <h4>Wins:</h4>
+                    <h5 id="wins"></h5>
+                    <br>
+                    <h4>Guesses Remaining:</h4>
+                    <h6 id="guessesremaining"></h6>
+                    <br>
+                    <h4>Letters Guessed:</h4>
+                    <h3 id="guessedLetters"></h3>
                 </div>
             </div>
         </div>

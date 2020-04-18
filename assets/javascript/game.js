@@ -1,3 +1,4 @@
+//----------------------------------------------------
 var words = [
     "ultimate",
     "playstation",
@@ -7,15 +8,14 @@ var words = [
     "noirspider",
     "spiderham",
 ];
-//Empty variables to store values later
+//----------------------------------------------------
+//----------------------------------------------------
+// variables to store values later
 var randomWord = "";
 var Letters = []
 var blanks = 0;
 var blankSpace = [];
 var wrongGuess = [];
-
-
-//Counter Variables
 var wins = 0;
 var guessesRemaining = 7;
 
@@ -33,18 +33,19 @@ function beginGame() {
     //showing the "_" in HTML. innerHTML sets/returns the elements HTML
     document.getElementById("currentword").innerHTML = "  " + blankSpace.join("  ");
 
-    //console logging 
-    console.log(randomWord);
-    console.log(Letters)
-    console.log(blanks)
-    console.log(blankSpace)
 }
-
+//----------------------------------------------------
 
 // i didnt do audio cause this process confused the hell out of me, so i wanted to get it working first
 // below are the image clues
-//----------------------------------------------------
 
+//----------------------------------------------------
+console.log(randomWord);
+console.log(Letters);
+console.log(blanks);
+console.log(blankSpace);
+//----------------------------------------------------
+//----------------------------------------------------
 function spiderImage() {
     //Ultimate Spider Costume
     //---------------------------
@@ -82,7 +83,7 @@ function spiderImage() {
         document.getElementById("image").src = "./assets/images/spider_ham.jpg";
     }
 }
-
+//----------------------------------------------------
 
 //resets game to begin play
 //----------------------------------------------------
@@ -95,9 +96,8 @@ function reset() {
 
 //----------------------------------------------------
 
-
+//----------------------------------------------------
 //CHECK LETTERS/COMPARE to see if letter selected matches random word
-
 function checkEL(letter) {
     var letterEL = false;
     //if the generated randomword is equal to the letter entered.then variable is true. more of an explanation to myself than a comment
@@ -122,10 +122,10 @@ function checkEL(letter) {
     }
     console.log(blankSpace);
 }
+//----------------------------------------------------
 
-// gameWin FUNCTION. determines win or loss
-
-//if game won
+// gameWin FUNCTION. determines win or loss. i chose innerHTML as i could understand it better than the other methods.
+//----------------------------------------------------
 function gameWin() {
     console.log("wins:" + wins + "| guesses left:" + guessesRemaining)
 
@@ -141,19 +141,17 @@ function gameWin() {
         reset();
         alert("YOU LOSE");
     }
-    //display losses on screen && guesses remaining countdown
+    //guesses remaining countdown
     document.getElementById("currentword").innerHTML = "  " + blankSpace.join(" ");
     document.getElementById("guessesremaining").innerHTML = " " + guessesRemaining;
 }
+//----------------------------------------------------
 
+// EXECUTE GAME HERE
 
-// EXECUTE GAME 
-
-
+//----------------------------------------------------
 beginGame();
 spiderImage();
-
-//check for keyup, and convert to lowercase then store in guesses && check to see if guess entered matches value of random word
 document.onkeyup = function (event) {
     var guesses = event.key.toLowerCase();
     checkEL(guesses);
@@ -163,4 +161,4 @@ document.onkeyup = function (event) {
     //display/store incorrect letters on screen
     document.getElementById("guessedLetters").innerHTML = "  " + wrongGuess.join(" ");
 }
-
+//----------------------------------------------------

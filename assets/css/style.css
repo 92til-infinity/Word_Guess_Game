@@ -1,0 +1,40 @@
+body{
+    background-image: url(https://i.ytimg.com/vi/UE8gCDonRTU/maxresdefault.jpg);
+
+    background-size: contain;
+
+}
+
+#title-card{
+    background-image: url(https://66.media.tumblr.com/0accb739897fafa6ee72a1081e426826/tumblr_pa1zb1ugQd1x3ukc0o9_500.png);
+    background-size: contain;
+    color: white;
+    text-align: center;
+    height: 250px;
+}
+
+#guess-card{
+    color: black;
+    background-color: lightblue;
+}
+
+.center{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+img {
+    height: 50%;
+}
+
+#clue-card{
+    color: black;
+}
+
+
+#scoreboard{
+    color: black;
+    background-color: lightblue;
+}
