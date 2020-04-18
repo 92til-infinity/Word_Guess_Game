@@ -1,11 +1,11 @@
 var words = [
-    "Ultimate",
-    "Playstation",
-    "Original",
-    "Spider-Gwen",
-    "Iron-Spider",
-    "Noir-Spider",
-    "Spider-Ham",
+    "ultimate",
+    "playstation",
+    "original",
+    "spidergwen",
+    "ironspider",
+    "noirspider",
+    "spiderham",
 ];
 //Empty variables to store values later
 var randomWord = "";
@@ -14,9 +14,9 @@ var blanks = 0;
 var blankSpace = [];
 var wrongGuess = [];
 
+
 //Counter Variables
 var wins = 0;
-var losses = 0;
 var guessesRemaining = 7;
 
 function beginGame() {
@@ -39,6 +39,8 @@ function beginGame() {
     console.log(blanks)
     console.log(blankSpace)
 }
+
+
 // i didnt do audio cause this process confused the hell out of me, so i wanted to get it working first
 // below are the image clues
 //----------------------------------------------------
@@ -47,49 +49,54 @@ function spiderImage() {
     //Ultimate Spider Costume
     //---------------------------
     if (randomWord === words[0]) {
-        document.getElementById("image").src = "./assets/images/";
+        document.getElementById("image").src = "./assets/images/Miles_Morales_Ultimate_Spider-Man.jpg";
     }
     //Playstation Spider Costume
-    //---------------------------
+    //---------------------------s
     else if (randomWord === words[1]) {
-        document.getElementById("image").src = "./assets/images/";
+        document.getElementById("image").src = "./assets/images/white_spider_img";
     }
     //Original Spider Costume
     //---------------------------
     else if (randomWord === words[2]) {
-        document.getElementById("image").src = "./assets/images/";
+        document.getElementById("image").src = "./assets/images/Spider_Man_Original";
     }
     //Spider-Gwen Spider Costume
     //---------------------------
     else if (randomWord === words[3]) {
-        document.getElementById("image").src = "./assets/images/";
+        document.getElementById("image").src = "./assets/images/spider-gwen";
     }
     //Iron-Spider Spider Costume
     //---------------------------
     else if (randomWord === words[4]) {
-        document.getElementById("image").src = "./assets/images/";
+        document.getElementById("image").src = "./assets/images/Iron_Spider";
     }
     //Noir-Spider Spider Costume
     //---------------------------
     else if (randomWord === words[5]) {
-        document.getElementById("image").src = "./assets/images/";
+        document.getElementById("image").src = "./assets/images/Noir_Spiderman";
     }
     //Spider-Ham Spider Costume
     //---------------------------
     else if (randomWord === words[6]) {
-        document.getElementById("image").src = "./assets/images/";
+        document.getElementById("image").src = "./assets/images/spider_ham";
     }
 };
 
+spiderImage();
+//----------------------------------------------------
 
-
+//resets game to begin play
 //----------------------------------------------------
 function reset() {
     guessesRemaining = 9;
     wrongGuess = []; //holds the letters when you guess wrong
     blankSpace = [];
-    Game()
+    beginGame();
 }
+
+//----------------------------------------------------
+
 
 //CHECK LETTERS/COMPARE to see if letter selected matches random word
 
@@ -122,7 +129,7 @@ function checkEL(letter) {
 
 //if game won
 function gameWin() {
-    console.log("wins:" + wins + "| losses:" + losses + "| guesses left:" + guessesRemaining)
+    console.log("wins:" + wins + "| guesses left:" + guessesRemaining)
 
     //alert trigger when the WIN happens
     if (Letters.toString() == blankSpace.toString()) {
@@ -133,9 +140,8 @@ function gameWin() {
 
         //alert trigger when the LOSS happens
     } else if (guessesRemaining === 0) {
-        losses++;
-        reset()
-        alert("YOU LOSE")
+        reset();
+        alert("YOU LOSE");
     }
     //display losses on screen && guesses remaining countdown
     document.getElementById("currentword").innerHTML = "  " + blankSpace.join(" ");
@@ -146,10 +152,10 @@ function gameWin() {
 // EXECUTE GAME 
 
 
-Game();
+beginGame();
 
 //check for keyup, and convert to lowercase then store in guesses && check to see if guess entered matches value of random word
-document.onkeydown = function (event) {
+document.onkeyup = function (event) {
     var guesses = event.key.toLowerCase();
     checkEL(guesses);
     gameWin();

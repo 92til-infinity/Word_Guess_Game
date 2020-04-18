@@ -30,7 +30,7 @@
         <div class="row m-6"></div>
 
 
-        <div class="col">
+        <div class="col-lg">
             <div class="card">
                 <div class="card-body" id="head-card">
                     <h2>INTO THE SPIDER-VERSE</h2>
@@ -41,44 +41,42 @@
 
     <div class="container">
 
-        <div class="row sm-12 m-8"></div>
-        <div class="col-sm">
-            <div class="card">
-                <div class="card-body" id="word-card">
-                    <h4>The Word</h4>
-                    <h3 id="currentword">_ _ _ </h3>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-lg">
-            <div class="card">
-                <div class="card-body" id="word-card">
-                    <p>What spider-man is this?</p>
-                    <img src="">
-                </div>
-            </div>
+        <div class="row sm-12 m-8">
             <div class="col-lg">
-                <div class="card-body">
+                <div class="card">
+                    <div class="card-body">
+                        <h4>The Word</h4>
+                        <h3 id="currentword"></h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row sm-12 m-8">
+            <div class="col-lg">
+                <div class="card">
+                    <div class="card-body" id="word-card">
+                        <p>What spider-man is this?</p>
+                        <img id="image" src="">
+                    </div>
+                </div>
+                <div class="col-lg">
+                    <div class="card-body">
 
-                    <h4>Wins:</h4>
-                    <h5 id="wins"></h5>
-                    <br>
-                    <h4>Guesses Remaining:</h4>
-                    <h6 id="guessesremaining"></h6>
-                    <br>
-                    <h4>Letters Guessed:</h4>
-                    <h3 id="guessedLetters"></h3>
+                        <h4>Wins:</h4>
+                        <h5 id="wins"></h5>
+                        <br>
+                        <h4>Guesses Remaining:</h4>
+                        <h6 id="guessesremaining"></h6>
+                        <br>
+                        <h4>Letters Guessed:</h4>
+                        <h3 id="guessedLetters"></h3>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-    </div>
 
-    <script>
-        resetGame();
-        updateDisplay();
-    </script>
+
     <script src="./assets/javascript/game.js"></script>
 
 </body>
