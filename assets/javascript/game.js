@@ -54,37 +54,35 @@ function spiderImage() {
     //Playstation Spider Costume
     //---------------------------s
     else if (randomWord === words[1]) {
-        document.getElementById("image").src = "./assets/images/white_spider_img";
+        document.getElementById("image").src = "./assets/images/white_spider_img.jpg";
     }
     //Original Spider Costume
     //---------------------------
     else if (randomWord === words[2]) {
-        document.getElementById("image").src = "./assets/images/Spider_Man_Original";
+        document.getElementById("image").src = "./assets/images/Spider_Man_Original.jpg";
     }
     //Spider-Gwen Spider Costume
     //---------------------------
     else if (randomWord === words[3]) {
-        document.getElementById("image").src = "./assets/images/spider-gwen";
+        document.getElementById("image").src = "./assets/images/spider-gwen.jpg";
     }
     //Iron-Spider Spider Costume
     //---------------------------
     else if (randomWord === words[4]) {
-        document.getElementById("image").src = "./assets/images/Iron_Spider";
+        document.getElementById("image").src = "./assets/images/Iron_Spider.jpg";
     }
     //Noir-Spider Spider Costume
     //---------------------------
     else if (randomWord === words[5]) {
-        document.getElementById("image").src = "./assets/images/Noir_Spiderman";
+        document.getElementById("image").src = "./assets/images/Noir_Spiderman.jpg";
     }
     //Spider-Ham Spider Costume
     //---------------------------
     else if (randomWord === words[6]) {
-        document.getElementById("image").src = "./assets/images/spider_ham";
+        document.getElementById("image").src = "./assets/images/spider_ham.jpg";
     }
-};
+}
 
-spiderImage();
-//----------------------------------------------------
 
 //resets game to begin play
 //----------------------------------------------------
@@ -93,7 +91,7 @@ function reset() {
     wrongGuess = []; //holds the letters when you guess wrong
     blankSpace = [];
     beginGame();
-}
+};
 
 //----------------------------------------------------
 
@@ -153,6 +151,7 @@ function gameWin() {
 
 
 beginGame();
+spiderImage();
 
 //check for keyup, and convert to lowercase then store in guesses && check to see if guess entered matches value of random word
 document.onkeyup = function (event) {
@@ -164,3 +163,4 @@ document.onkeyup = function (event) {
     //display/store incorrect letters on screen
     document.getElementById("guessedLetters").innerHTML = "  " + wrongGuess.join(" ");
 }
+
